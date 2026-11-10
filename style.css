@@ -62,7 +62,6 @@ p { margin: 0; }
 .top-row {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px 16px;
   padding: 6px 0 14px;
@@ -94,14 +93,6 @@ p { margin: 0; }
   text-shadow: 0 0 12px rgba(230, 255, 154, .35);
   letter-spacing: .02em;
 }
-.about-link {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  padding-bottom: 6px;
-}
-.about-link:hover { color: var(--text); }
 .rainbow {
   height: 4px;
   border-radius: 999px;
@@ -213,6 +204,9 @@ p { margin: 0; }
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
   backdrop-filter: blur(18px) saturate(1.4);
   pointer-events: none;
+  /* Above .card-hit, so the Play/Open pill gets its own taps. The blur
+     makes this bar a stacking context, so the pill can't rise alone. */
+  z-index: 2;
 }
 .card-bar .get { pointer-events: auto; position: relative; z-index: 2; }
 
@@ -269,7 +263,10 @@ p { margin: 0; }
 .sheet {
   width: min(680px, 100%);
   max-width: 100%;
-  max-height: min(92dvh, 100%);
+  /* Plain viewport units only: Safari resolved the old percentage here
+     to 0, which collapsed the sheet to nothing. */
+  --sheet-h: 92dvh;
+  max-height: var(--sheet-h);
   margin: auto auto 0;
   padding: 0;
   border: 0;
@@ -279,7 +276,7 @@ p { margin: 0; }
   overflow: hidden;
 }
 @media (min-width: 720px) {
-  .sheet { margin: auto; border-radius: var(--radius); max-height: 88dvh; }
+  .sheet { margin: auto; border-radius: var(--radius); --sheet-h: 88dvh; }
 }
 .sheet[open] { animation: rise .35s cubic-bezier(.2, .8, .2, 1); }
 .sheet::backdrop {
@@ -293,7 +290,7 @@ p { margin: 0; }
   .card, .card:hover { transition: none; transform: none; }
 }
 .sheet-inner {
-  max-height: inherit;
+  max-height: var(--sheet-h);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
