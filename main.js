@@ -11,6 +11,16 @@
     });
   } catch (e) { /* date line is decoration only */ }
 
+  // Mark the sticky header as stuck once the date line above it has
+  // scrolled away.
+  var top = document.getElementById("top");
+  var dateLine = document.getElementById("today");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      top.classList.toggle("stuck", !entries[0].isIntersecting);
+    }).observe(dateLine);
+  }
+
   function el(tag, cls, text) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
