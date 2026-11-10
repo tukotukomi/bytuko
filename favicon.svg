@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a0"/>
+      <stop offset="1" stop-color="#f5b81c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#1d1a45"/>
+  <!-- the Sierpinski mark from the fun by tuko card -->
+  <path d="M32 9 L57 53 L7 53 Z" fill="url(#g)" stroke="#3a2340" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#3a2340">
+    <path d="M19.5 31 L44.5 31 L32 53 Z"/>
+    <path d="M25.75 20 L38.25 20 L32 31 Z"/>
+    <path d="M13.25 42 L25.75 42 L19.5 53 Z"/>
+    <path d="M38.25 42 L50.75 42 L44.5 53 Z"/>
+  </g>
+</svg>

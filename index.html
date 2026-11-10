@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>fun by tuko</title>
+  <meta name="description" content="Games and tools made by Tuko: Betty Lou's Farm Hop, Fractalize Studio, Blue Marble Forecast and Sharkwork Submarine.">
+  <meta property="og:title" content="fun by tuko">
+  <meta property="og:description" content="Games and tools made by Tuko.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bytuko.fun/">
+  <meta property="og:image" content="https://bytuko.fun/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#16143a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Silkscreen&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <p class="date" id="today"></p>
+    <div class="top-row">
+      <h1 class="wordmark" aria-label="fun by tuko">
+        <img class="mark" src="favicon.svg" alt="">
+        <span class="fun" aria-hidden="true">fun</span>
+        <span class="by" aria-hidden="true">by tuko</span>
+      </h1>
+      <a class="about-link" href="https://tuckermills.com">tuckermills.com</a>
+    </div>
+    <div class="rainbow" aria-hidden="true"></div>
+  </header>
+
+  <main class="cards" id="cards"></main>
+
+  <footer class="foot">
+    <a href="https://tuckermills.com">Made by Tucker Mills</a>
+  </footer>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-name">
+    <div class="sheet-inner">
+      <button class="close" id="close" aria-label="Close" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="sheet-media" id="sheet-media"></div>
+      <div class="sheet-body">
+        <div class="app-row">
+          <img class="icon icon-lg" id="sheet-icon" alt="">
+          <div class="app-text">
+            <h2 id="sheet-name"></h2>
+            <p class="sub" id="sheet-tagline"></p>
+            <a class="get" id="sheet-get" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+        <ul class="facts" id="sheet-facts"></ul>
+        <div class="about" id="sheet-about"></div>
+        <ul class="links" id="sheet-links"></ul>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="apps.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
