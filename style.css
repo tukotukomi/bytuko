@@ -134,8 +134,9 @@ p { margin: 0; }
   .card:hover { transform: translateY(-3px); }
 }
 @media (min-width: 720px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
-  .card { aspect-ratio: 3 / 4; }
+  /* Hero across the top, then the rest two by two. */
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .card { aspect-ratio: 5 / 4; }
   .card.hero { grid-column: 1 / -1; aspect-ratio: 16 / 8; }
   .card.hero .card-title { font-size: clamp(32px, 4.2vw, 46px); max-width: 14ch; }
 }

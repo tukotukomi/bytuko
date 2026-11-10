@@ -84,5 +84,24 @@ window.APPS = [
       { label: "AQUAZEN on Bandcamp", url: "https://sharkwork.bandcamp.com/album/aquazen" },
       { label: "Sharkwork on Spotify", url: "https://open.spotify.com/artist/58Qvc4xDrmDAD7V8rKqWRW" }
     ]
+  },
+  {
+    id: "fantasy-radio-companion",
+    name: "Fantasy Radio Companion",
+    tagline: "An adventure that runs on music.",
+    eyebrow: "Idle RPG",
+    category: "Music & games",
+    url: "https://fantasyradiocompanion.com",
+    domain: "fantasyradiocompanion.com",
+    action: "Play",
+    icon: "media/radio-icon.png",
+    image: "media/radio.jpg",
+    focus: "50% 100%", // the party at the campfire
+    accent: "#f0a04b",
+    facts: ["Free", "Browser + phone", "EN · ES · 中文"],
+    about: [
+      "A pixel-art idle RPG: tune in to an internet radio station and your party adventures for as long as the music plays.",
+      "Days and seasons pass, new heroes join at the tavern and monsters wander in to be fought. Every station has a Support button for the people keeping the music on."
+    ]
   }
 ];
